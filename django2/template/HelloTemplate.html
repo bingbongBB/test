@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hello~It's me~:D</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1 style='text-align:center;' id="text">歡迎光臨</h1>
+        <div style='text-align:center;'><button type='button' class="btn btn-outline-secoundary" id="click">change</button></div>
+        <form action="/post_test" method="post"> {% csrf_token %}
+            <input type="text" name="data"><br>
+            <input type="submit">
+        </form>
+        <input type='text'/>
+        
+        <script>
+            document.getElementById('click').onclick=function(){change()}
+            function change(){
+                document.getElementById('text').innerHTML='Button is clicked'
+                var y=666
+                console.log(y)
+                console.log('test')
+            }
+        </script>
+    </body>
+</html>
